@@ -8,7 +8,7 @@ Al utilizar esta herramienta, aceptas las condiciones:
 2. No atacar LatinPlay (Respeto más que nada, ya que se les está proporcionando esta herramienta por parte de nosotros)
 3. No comercializar esta herramienta, ya que es gratuita.
 
-Herramienta por GhostyCeh & ammaraskar
+Herramienta por GhostyCeh (BETA, Será actualizada con el tiempo)
 
 ## ¿Cómo instalar?
 

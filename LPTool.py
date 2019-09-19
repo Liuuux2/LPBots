@@ -39,6 +39,7 @@ def bots ():
     print ("4 - 1.9.2")
     print ("5 - 1.9.3 - 1.9.4")
     print ("6 - 1.10")
+    print ("7 - Custom protocol")
     print ("")
     O0OOO0OO00OO00OO0 =input ('\033[1;33;40mroot@LPBot: \033[1;34;40m~ \033[1;37;40m$ ')
     if O0OOO0OO00OO00OO0 ==1 :
@@ -53,6 +54,8 @@ def bots ():
         OOOOO0O0OOO00O00O =110
     elif O0OOO0OO00OO00OO0 ==6 :
         OOOOO0O0OOO00O00O =210
+    elif O0OOO0OO00OO00OO0 ==7 :
+        OOOOO0O0OOO00O00O = raw_input("[LPBot] Introduce el Protocolo: ")
     else :
         synckill ('\n\033[1;31;40m[!] Invalid option!')
     OOO0O00OO0000O00O =['latinplay.net','mc.latinplay.net']

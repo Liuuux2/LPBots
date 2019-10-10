@@ -20,6 +20,10 @@ import click
 import os
 os .system ("clear")
 fecha =datetime .datetime .now ()
+
+def sms ():
+    os .system ("sudo python LPSMSBomber.py")
+
 def exploit ():
     os .system ("sudo python3 LPExploit.py")
 def nmap ():
@@ -298,7 +302,9 @@ print (" 3 - Bots")
 print ("")
 print (" 4 - HTTP Exploit (BungeeCord)")
 print ("")
-print (" 5 - Salir")
+print (" 5 - SMS Bomber (Only US)")
+print ("")
+print (" 6 - Salir")
 print ("------------------------------------------------------")
 print ("")
 print (" - Herramienta desarrollada por GhostyCeh - ")
@@ -313,4 +319,6 @@ if (eleccion ==3 ):
 if (eleccion ==4 ):
     exploit ()
 if (eleccion ==5 ):
+    sms()
+if (eleccion ==6 ):
     synckill ('\n\033[1;31;40m[!] Que tenga un buen dia!')

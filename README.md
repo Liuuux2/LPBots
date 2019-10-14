@@ -14,13 +14,15 @@ Herramienta por GhostyCeh (BETA, Será actualizada con el tiempo)
 
 Es tan facil como únicamente hacer **git clone** al repositorio y ejecutarla.
 
-* `git clone https://github.com/eddoffaqarr/LPTool`
+* `git clone https://github.com/GhostyCeh/LPTool`
 * `cd LPTool`
-* `sudo python2 LPTool.py`
+* `sudo python install.py`
 
-### El codigo fue ligeramente obfuscado para que los skiddies no puedan tener tanto control sobre ella
-### Pero no extremadamente para que puedan leer el codigo aquellos que desean hacer un cambio.
+## ¿Cómo utilizar??
 
+Es tan facil como únicamente **ejecutar** LPTool.py.
+
+* `sudo python LPTool.py`
 
 ## License
 The code is licensed under the MIT License.

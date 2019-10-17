@@ -317,7 +317,7 @@ print (" 1 - Escaneo                  - Escanea una IP utilizando NMAP")
 print (" 2 - Ping (Puerto TCP)        - Pinguea una IP:PUERTO utilizando paquetes TCP")
 print (" 3 - Bots                     - Bots para minecraft (1.8 - 1.x.x)")
 print (" 4 - HTTPExploit (BungeeCord) - Floodea BC con paquetes HTTP a IP:25565 (Layer 7)")
-print (" 5 - SMS Bomber (Only US)     - SMS bombing a un telefono de USA
+print (" 5 - SMS Bomber (Only US)     - SMS bombing a un telefono de USA ")
 print ("")
 print (" 6 - Salir")
 print ("______________________________________________________")

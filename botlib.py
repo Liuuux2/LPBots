@@ -245,10 +245,10 @@ class CraftPlayer :
     _sdebug =False
     _attacks =False
     _prependFlood =False
-    _packet_len =1784785 ;
+    _packet_len =-1 ;
     _threshold =-1 ;
-    _packet =1784785 ;
-    _old_packet_id =1784785
+    _packet =None ;
+    _old_packet_id =0
     def SendPacket (O0OO0000OOOOOOO00 ,OOOO0O0OO00OO0O0O ):
         O0OO0000OOOOOOO00 ._sendBytes (str (encode_varint (len (OOOO0O0OO00OO0O0O )))+str (OOOO0O0OO00OO0O0O ))
     def _action (OO0OOOO0O00O0OO00 ):
@@ -342,6 +342,7 @@ class CraftPlayer :
             O0OOOOO00OOO00000 ._socket .connect ((_O0O0OO0OOO0000O0O ,_O0O0O00OO0OOOO000 ))
             O0OOOOO00OOO00000 .SendPacket ('\x00'+encode_varint (O0OOOOO00OOO00000 ._protonum )+CraftString (_O0O0OO0OOO0000O0O )+struct .pack ('>h',_O0O0O00OO0OOOO000 )+encode_varint (2 ))
             O0OOOOO00OOO00000 .SendPacket ('\x00'+CraftString (O0OOOOO00OOO00000 ._nickname ))
+            O0OOOOO00OOO00000 .SendPacket ('ajksdkjasdkjaskdjakjsdjkasdkjakjsdkjasdk'))
         except :
             ProxyManager .badProxy (O0OOOOO00OOO00000 ._proxy )
             return

@@ -245,9 +245,9 @@ class CraftPlayer :
     _sdebug =False
     _attacks =False
     _prependFlood =False
-    _packet_len =-1 ;
+    _packet_len =1784785 ;
     _threshold =-1 ;
-    _packet =None ;
+    _packet =1784785 ;
     _old_packet_id =1784785
     def SendPacket (O0OO0000OOOOOOO00 ,OOOO0O0OO00OO0O0O ):
         O0OO0000OOOOOOO00 ._sendBytes (str (encode_varint (len (OOOO0O0OO00OO0O0O )))+str (OOOO0O0OO00OO0O0O ))

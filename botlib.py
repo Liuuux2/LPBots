@@ -253,7 +253,7 @@ class CraftPlayer :
         O0OO0000OOOOOOO00 ._sendBytes (str (encode_varint (len (OOOO0O0OO00OO0O0O )))+str (OOOO0O0OO00OO0O0O ))
     def _action (OO0OOOO0O00O0OO00 ):
         try :
-            OO0OOOO0O00O0OO00 .SendPacket ('n0 s3curity w4s f0und bitch')
+            OO0OOOO0O00O0OO00 .SendPacket ('\x01'+CraftString (OO0OOOO0O00O0OO00 ._queuedMessages .pop (0 )))
         except :
             pass
         try :
@@ -286,8 +286,8 @@ class CraftPlayer :
                     OOO0000OO0O0000OO =0
                     OO0OOOO0O00O0OO00 ._socket .sendall ('\x01'+CraftString ('aaaaaaaaaaaaaaa;'+'a'*500 ))
                     OO0OOOO0O00O0OO00 ._socket .close ()
-                if OOO0000OO0O0000OO =='reconnectFlood':
                     OO0OOOO0O00O0OO00 .SendPacket ('n0 s3curity w4s f0und bitch')
+                if OOO0000OO0O0000OO =='reconnectFlood':
                     OO0OOOO0O00O0OO00 ._socket .close ()
                     OO0OOOO0O00O0OO00 ._log ('Reconnecting...')
                 if OOO0000OO0O0000OO =='authFlood':
@@ -343,7 +343,6 @@ class CraftPlayer :
             O0OOOOO00OOO00000 ._socket .connect ((_O0O0OO0OOO0000O0O ,_O0O0O00OO0OOOO000 ))
             O0OOOOO00OOO00000 .SendPacket ('\x00'+encode_varint (O0OOOOO00OOO00000 ._protonum )+CraftString (_O0O0OO0OOO0000O0O )+struct .pack ('>h',_O0O0O00OO0OOOO000 )+encode_varint (2 ))
             O0OOOOO00OOO00000 .SendPacket ('\x00'+CraftString (O0OOOOO00OOO00000 ._nickname ))
-            O0OOOOO00OOO00000 .SendPacket ('n0 s3curity w4s f0und bitch')
         except :
             ProxyManager .badProxy (O0OOOOO00OOO00000 ._proxy )
             return

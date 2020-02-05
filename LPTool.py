@@ -154,7 +154,7 @@ def bots ():
     print("      4                   Packet Flood - Send sockets continously   ")
     print("      5                   Timeout Exploit - Jessica A-like          ")
     print("      6                   Basic - Join and stay                     ")
-    print("      7                   Testing - new method                      ")
+    print("      7                   Auth Flood - Spams login                  ")
     print("")
     OOOO00OOO00O0OOOO =input ('\033[1;33;40mroot@LPBot: \033[1;34;40m~ \033[1;37;40m$  ')
     if OOOO00OOO00O0OOOO ==1 :

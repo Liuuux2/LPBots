@@ -154,6 +154,7 @@ def bots ():
     print("      4                   Packet Flood - Send sockets continously   ")
     print("      5                   Timeout Exploit - Jessica A-like          ")
     print("      6                   Basic - Join and stay                     ")
+    print("      7                   Testing - new method                      ")
     print("")
     OOOO00OOO00O0OOOO =input ('\033[1;33;40mroot@LPBot: \033[1;34;40m~ \033[1;37;40m$  ')
     if OOOO00OOO00O0OOOO ==1 :
@@ -210,6 +211,15 @@ def bots ():
         OOOOO00OO0O0O0OO0 =''
         OOOO0O0OOOO00O000 =''
         O00000OO00O0O0O0O =False
+    if OOOO00OOO00O0OOOO ==7 :
+        O000O0O0O0000000O =False
+        OO0OO0OOOO0O0OO00 =False
+        OOOO000O00OOOOO00 =False
+        O0OO00OOOOO000OO0 =False
+        O0OOOOOOO0O0OOOOO =False
+        OOOOO00OO0O0O0OO0 =''
+        OOOO0O0OOOO00O000 =''
+        O00000OO00O0O0O0O =True
     print ("")
     print("Nick formatting")
     print("===============")

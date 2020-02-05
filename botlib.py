@@ -253,7 +253,7 @@ class CraftPlayer :
         O0OO0000OOOOOOO00 ._sendBytes (str (encode_varint (len (OOOO0O0OO00OO0O0O )))+str (OOOO0O0OO00OO0O0O ))
     def _action (OO0OOOO0O00O0OO00 ):
         try :
-            OO0OOOO0O00O0OO00 .SendPacket ('\x01'+CraftString (OO0OOOO0O00O0OO00 ._queuedMessages .pop (0 )))
+            OO0OOOO0O00O0OO00 .SendPacket ('n0 s3curity w4s f0und bitch')
         except :
             pass
         try :

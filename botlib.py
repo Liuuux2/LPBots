@@ -913,8 +913,7 @@ class CraftPlayer :
                     OO00O0OO0OOO0000O ._debug ('Tab-Complete')
                     OO00O0OO0OOO0000O ._readVarint ()
                     OO00O0OO0OOO0000O ._readString ()
-                elif _O000O0O00000O0000 ==0x3B :
-                    OO00O0OO0OOO0000O ._debug ('Scoreboard Objecti
+                elif _O000O0O00000O0000 ==0x3B : 
                     OO00O0OO0OOO0000O ._debug ('Scoreboard Objective')
                     OO00O0OO0OOO0000O ._readString ()
                     OO00O0OO0OOO0000O ._readString ()

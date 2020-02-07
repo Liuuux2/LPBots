@@ -915,3 +915,70 @@ class CraftPlayer :
                     OO00O0OO0OOO0000O ._readString ()
                 elif _O000O0O00000O0000 ==0x3B :
                     OO00O0OO0OOO0000O ._debug ('Scoreboard Objecti
+                    OO00O0OO0OOO0000O ._debug ('Scoreboard Objective')
+                    OO00O0OO0OOO0000O ._readString ()
+                    OO00O0OO0OOO0000O ._readString ()
+                    OO00O0OO0OOO0000O ._getBytes (1 )
+                elif _O000O0O00000O0000 ==0x3C :
+                    OO00O0OO0OOO0000O ._debug ('Update Score')
+                    OO00O0OO0OOO0000O ._readString ()
+                    O0OOOOO00O000OOOO =int (binascii .b2a_hex (OO00O0OO0OOO0000O ._getBytes (1 )),16 )
+                    if O0OOOOO00O000OOOO !=1 :
+                        OO00O0OO0OOO0000O ._readString ()
+                        OO00O0OO0OOO0000O ._getBytes (4 )
+                elif _O000O0O00000O0000 ==0x3D :
+                    OO00O0OO0OOO0000O ._debug ('Display Scoreboard')
+                    OO00O0OO0OOO0000O ._getBytes (1 )
+                    OO00O0OO0OOO0000O ._readString ()
+                elif _O000O0O00000O0000 ==0x3E :
+                    OO00O0OO0OOO0000O ._debug ('Teams')
+                    OO00O0OO0OOO0000O ._readString ()
+                    O0O0O0O0OO000000O =int (binascii .b2a_hex (OO00O0OO0OOO0000O ._getBytes (1 )),16 )
+                    if O0O0O0O0OO000000O ==0 :
+                        OO00O0OO0OOO0000O ._readString ()
+                        OO00O0OO0OOO0000O ._readString ()
+                        OO00O0OO0OOO0000O ._readString ()
+                        OO00O0OO0OOO0000O ._getBytes (1 )
+                        O0OO00O00O000O00O =int (binascii .b2a_hex (OO00O0OO0OOO0000O ._getBytes (2 )),16 )
+                        OO00O0OO0OOO0000O ._getBytes (O0OO00O00O000O00O )
+                    if O0O0O0O0OO000000O ==2 :
+                        OO00O0OO0OOO0000O ._readString ()
+                        OO00O0OO0OOO0000O ._readString ()
+                        OO00O0OO0OOO0000O ._readString ()
+                        OO00O0OO0OOO0000O ._getBytes (1 )
+                    if O0O0O0O0OO000000O ==3 :
+                        O0OO00O00O000O00O =int (binascii .b2a_hex (OO00O0OO0OOO0000O ._getBytes (2 )),16 )
+                        OO00O0OO0OOO0000O ._getBytes (O0OO00O00O000O00O )
+                    if O0O0O0O0OO000000O ==4 :
+                        O0OO00O00O000O00O =int (binascii .b2a_hex (OO00O0OO0OOO0000O ._getBytes (2 )),16 )
+                        OO00O0OO0OOO0000O ._getBytes (O0OO00O00O000O00O )
+                elif _O000O0O00000O0000 ==0x3F :
+                    OO00O0OO0OOO0000O ._debug ('Información - '+OO00O0OO0OOO0000O ._readString ()+'')
+                    OO0O0OO0O00O0O0O0 =int (binascii .b2a_hex (OO00O0OO0OOO0000O ._getBytes (2 )),16 )
+                    OO00O0OO0OOO0000O ._getBytes (OO0O0OO0O00O0O0O0 )
+                else :
+                    if _O000O0O00000O0000 ==0x40 :
+                        O00O00OOOO00O0O00 =OO00O0OO0OOO0000O ._readString ()
+                        OO00O0OO0OOO0000O ._log ('Desconectado! - '+O00O00OOOO00O0O00)
+                        OO00O0OO0OOO0000O ._isConnected =False
+                        try :
+                            OO00O0OO0OOO0000O ._socket .close ()
+                        except :
+                            pass
+                        return
+                    if _O000O0O00000O0000 =='':
+                        pass
+                    else :
+                        if _O000O0O00000O0000 =='ER':
+                            if OO00O0OO0OOO0000O ._isConnected :
+                                OO00O0OO0OOO0000O ._log ('Desconectado! [Error de conexión]'+OO00O0OO0OOO0000O ._old_packet_id )
+                            try :
+                                if 'pFlood'in OO00O0OO0OOO0000O ._attacks and OO00O0OO0OOO0000O ._isConnected :
+                                    OO00O0OO0OOO0000O ._isConnected =False
+                                else :
+                                    OO00O0OO0OOO0000O ._socket .close ()
+                            except :
+                                pass
+                            OO00O0OO0OOO0000O ._isConnected =False
+                            return
+        return

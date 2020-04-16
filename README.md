@@ -14,7 +14,7 @@ Herramienta por GhostyCeh *(Got code from Gravy > https://github.com/Armax/Gravy
 
 Es tan facil como únicamente hacer **git clone** al repositorio y ejecutarla.
 
-* `git clone https://github.com/GhostyCeh/LPTool`
+* `git clone https://github.com/GhostyCeh/LPBots`
 * `cd LPTool`
 * `sudo python install.py`
 
